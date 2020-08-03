@@ -1,0 +1,218 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+
+body{
+    font-family: sans-serif;
+   }   
+
+
+ .container{
+     padding: 2rem;
+      width: 90%;
+      margin: auto;
+      overflow: hidden;
+    }
+    /* contact form css */
+
+
+    #contact-section{
+      background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.9)),url(./contact.png);
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      width: 100% ;
+      padding-bottom: 2%;
+    }
+
+    #contact-section .container h2{
+      text-align: center;
+       text-decoration: underline;
+        /* text-decoration-color:red; */
+        text-underline-position: under;
+        color: rgb(238, 235, 235);
+        letter-spacing: 2px;
+        
+    }
+
+    
+
+    #contact-section .container p{
+      text-align: center; 
+      width: 70%; 
+      margin-left: auto;
+       margin-right: auto; 
+       padding-bottom: 3%;
+       color: #fff;
+       letter-spacing:3px;
+    }
+
+    .contact-form i.fa{
+      /* color: red; */
+      /* color: #fff; */
+      font-size: 22px; 
+      padding: 3%;
+      background-color: none;
+      border-radius: 80%;
+      margin: 2%;
+      /* border: 2px solid #fff; */
+      cursor: pointer;
+      border:2px solid rgb(190, 190, 190);
+      color: rgb(190, 190, 190);
+    }
+    
+    .contact-form i.fa:hover{
+      cursor: pointer;
+      border:2px solid white;
+      color: white;
+    }
+     
+      .contact-form{
+        padding: 2rem;
+        display: grid;
+        grid-template-columns: auto auto;
+         }
+      
+      .form-info{
+        font-size: 16px;
+        font-style: italic;
+        color: white;
+        letter-spacing: 2px;
+      }
+      input{
+        padding: 10px;
+        margin:10px;
+        width: 70%;
+        background-color:rgba(136, 133, 133, 0.5);
+        color: white;
+        border: none;
+        outline:none;
+      }
+
+      input::placeholder{
+        color: white;
+      }
+    
+       textarea{
+      padding: 10px;
+      margin: 10px;     
+      width: 70%;
+      background-color:rgba(136, 133, 133, 0.5);
+      color: white;
+      border: none;
+      outline:none;
+     }
+     textarea::placeholder{
+       color: white;
+     }
+     
+      
+    
+      .submit{
+      width: 40%;
+      background: none;
+      padding: 4px;
+      outline: none;
+       /* border: 1px solid #fff;
+      color: #fff; */
+      font-size: 13px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      height: 33px;
+      text-align: center;
+      cursor: pointer;
+      letter-spacing: 2px;
+      margin-left: 3%;
+      border:2px solid rgb(190, 190, 190);
+      color: rgb(190, 190, 190);
+     }
+
+     .submit:hover{
+      border: 1px solid #fff;
+      color: #fff;
+      cursor: pointer;
+     }
+
+     nav{
+        height: 10vh;
+        background: blue;
+        z-index: 2;
+        position: relative;
+      }
+      
+      .navlinks{
+        display: flex;
+        list-style: none;
+        width: 50%;
+        height: 100%;
+        justify-content: space-around;
+        align-items: center;
+        margin-left: auto;
+      }
+      
+      .navlinks li a{
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+      }
+        /* media queries */
+@media (max-width: 768px){
+
+ #contact-section .contact-form{
+        display: block;
+        width: 100%;
+        text-align: center;
+      }
+      #contact-section .submit{
+
+        width: 60%;
+      }
+
+      .line{
+        width: 20px;
+        height: 3px;
+        background: white;
+        margin: 5px;
+      }
+    
+      nav{
+        position: relative;
+      }
+    
+      .hamburger{
+        position: absolute;
+        cursor: pointer;
+        right: 5%;
+        translate: translate(-5%,-50%);
+        z-index: 3;
+      }
+      .navlinks{
+        position: fixed;
+        background: #0d1e4d;
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+        clip-path: circle(100px at 90% -20%);
+        -webkit-clip-path:circle(100px at 90% -20%);
+        transition: all 1s ease-out;
+        pointer-events: none;
+      }
+      .navlinks.open{
+        clip-path: circle(1000px at 90% -20%);
+        -webkit-clip-path:circle(1000px at 90% -20%);
+        pointer-events: all;
+      }
+      .navlinks li{
+        opacity: 0;
+      }
+      .navlinks li:nth-child(0){transition: all 0.5s ease 0.2s;}
+      .navlinks li:nth-child(1){transition: all 0.5s ease 0.4s;}
+      .navlinks li:nth-child(2){transition: all 0.5s ease 0.6s;}
+      .navlinks li:nth-child(3){transition: all 0.5s ease 0.8s;}
+      li.fade{
+        opacity: 1;
+      }
+    }

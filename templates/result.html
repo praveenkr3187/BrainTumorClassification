@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Brain Tumour Classification</title>
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="-1" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" >
+</head>
+<body>
+    <nav>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <ul class="navlinks">
+            <li><a href="/">Home</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/definition">Glossary</a></li>
+        </ul>
+    </nav>
+
+    <div class="images">
+        <img src="{{url_for('static',filename='')}}{{srcfoo}}"">
+        <img src="{{url_for('static',filename='')}}{{srcgoo}}"">    
+    </div>
+    
+    </div>
+    <div class="output">
+        <p style="font-size: 22px;">
+            Tumour type : {{pred}}
+        </p>
+    </div>
+    
+    <p class="features" style="margin-top:4rem; font-size: 2rem;">Features : </p>
+
+    <div class="features" >
+        <table>
+            <tr>
+              <td><a href="/definition#asm">ASM</a></td>
+              <td>{{ASM}}</td> 
+            </tr>
+            <tr>
+              <td><a href="/definition#Smoothness">Average smoothness</a></td>
+              <td>{{Average_smoothness}}</td> 
+            </tr>
+            <tr>
+                <td><a href="/definition#contrast">Contrast</a></td>
+                <td>{{Contrast}}</td>
+            </tr>
+            <tr>
+                <td><a href="/definition#energy">Energy</a></td>
+                <td>{{Energy}}</td>
+            </tr>
+            <tr>
+                <td><a href="/definition#skewness">Skew</a></td>
+                <td>{{Skew}}</td>
+            </tr>
+            <tr>
+                <td><a href="/definition#mean">Mean</a></td>
+                <td>{{Mean}}</td>
+            </tr>
+            <tr>
+                <td><a href="/definition#kurtosis">Kurtosis</a></td>
+                <td>{{Kurtosis}}</td>
+            </tr>
+            
+            
+            <tr>
+                <td><a href="/definition#std">Std</a></td>
+                <td>{{Std}}</td>
+            </tr>
+            <tr>
+                <td><a href="/definition#correlation">Correlation</a></td>
+                <td>{{Correlation}}</td>
+            </tr>
+        </table>
+    </div>
+</body>
+<script type="text/javascript"  src="./style.css" charset="utf-8"></script>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Brain Tumour Classification</title>
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="-1" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" >
+</head>
+<body>
+    <nav>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <ul class="navlinks">
+            <li><a href="/">Home</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/definition">Glossary</a></li>
+        </ul>
+    </nav>
+
+    <header class='vidheader container'>
+        <div class='fullscreenvid'>
+            <video autoplay muted loop id="myVideo">
+                <source  src="{{ url_for('static', filename='brain.mp4') }}" type="video/mp4">
+            </video>
+        </div>
+        <div class="headeroverlay"></div>
+        <div class="headercontent">
+            <div class="description">
+                Choose a file to see results
+            </div>
+            <div class="upload">
+                <form action="http://127.0.0.1:5000/handle_form" method="post" enctype="multipart/form-data">
+                    <input type="file" name="file"/>
+                    <input type="submit" value="Upload">
+                </form>
+            </div>
+        </div>
+    </header>
+</body>
+<script type="text/javascript"  src="./style.css" charset="utf-8"></script>
+
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Brain Tumour Classification</title>
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="-1" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style2.css') }}" >
+</head>
+<body>
+    <nav>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <ul class="navlinks">
+            <li><a href="/">Home</a></li>
+            <li><a href="/contact">Contact</a></li>
+            <li><a href="/definition">Glossary</a></li>
+        </ul>
+    </nav>
+
+    <header class='vidheader container'>
+        <div class='fullscreenvid'>
+            <video autoplay muted loop id="myVideo">
+                <source  src="{{ url_for('static', filename='brain2.mp4') }}" type="video/mp4">
+            </video>
+        </div>
+        <div class="headeroverlay">
+            <div class="headercontent">
+                <div id="asm">
+                    <b><u>ASM</u></b> <br>
+                    The ASM model is trained from manually drawn contours (surfaces in 3D) in training images. The ASM model finds the main variations in the training data using Principal Component Analysis (PCA), which enables the model to automatically recognize if a contour is a possible/good object contour. Also the ASM modes contains matrices describing the texture of the lines perpendicular to the control point, these are used to correct the positions in the search step.
+                    After creating the ASM model, an initial contour is deformed by finding the best texture match for the control points. This is an iterative process, in which the movement of the control points is limited by what the ASM model recognizes from the training data as a "normal" object contour. 
+                </div>
+                <div id="Smoothness">
+                    <b><u>Smoothness</u></b><br>
+                    In statistics and image processing, to smooth a data set is to create an approximating function that attempts to capture important patterns in the data, while leaving out noise or other fine-scale structures/rapid phenomena. In smoothing, the data points of a signal are modified so individual points higher than the adjacent points (presumably because of noise) are reduced, and points that are lower than the adjacent points are increased leading to a smoother signal.
+                </div>
+                <div id="contrast">
+                    <b><u>Contrast</u></b><br>
+                    Contrast can be simply explained as the difference between maximum and minimum pixel intensity in an image.
+                </div>
+                <div id="energy">
+                    <b><u>Energy</u></b><br>
+                    The energy is a measure the localized change of the image.The energy gets a bunch of different names and a lot of different contexts but tends to refer to the same thing. It's the rate of change in the color/brightness/magnitude of the pixels over local areas. This is especially true for edges of the things inside the image and because of the nature of compression, these areas are the hardest to compress and therefore it's a solid guess that these are more important, they are often edges or quick gradients. 
+                </div>
+                <div id="skewness">
+                    <b><u>Skewness</u></b><br>
+                    In terms of digital image processing, Darker and glossier surfaces tend to be more positively skewed than lighter and matte surfaces. Hence we can use skewness in making judgements about image surfaces.
+                </div>
+                <div id="mean">
+                    <b><u>Mean</u></b><br> 
+                    Compute the arithmetic mean along the specified axis.Returns the average of the array elements. The average is taken over the flattened array by default, otherwise over the specified axis. 
+                </div>
+                <div id="kurtosis">
+                    <b><u>Kurtosis</u></b><br>
+                    In digital image processing kurtosis values are interpreted in combination with noise and resolution measurement. High kurtosis values should go hand in hand with low noise and low resolution.
+                </div>
+                <div id="std">
+                    <b><u>STD</u></b><br>
+                    A measure of the spread of a distribution, of the array elements. The standard deviation is computed for the flattened array by default, otherwise over the specified axis.
+                </div>
+                <div id="correlation">
+                    <b><u>Correlation</u></b><br>
+                    Correlation is the process of moving a filter mask often referred to as kernel over the image and computing the sum of products at each location. Correlation is the function of displacement of the filter. In other words, the first value of the correlation corresponds to zero displacement of the filter, the second value corresponds to one unit of displacement, and so on.
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    
+    
+    
+
+    
+</body>
+<script type="text/javascript"  src="./style.css" charset="utf-8"></script>
+
+</html>
